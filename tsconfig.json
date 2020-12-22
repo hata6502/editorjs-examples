@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "module": "ESNext",
+    "module": "ES2015",
     "moduleResolution": "node",
     "pretty": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext"
+    "target": "ES2015"
   }
 }
