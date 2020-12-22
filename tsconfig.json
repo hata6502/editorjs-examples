@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
     "module": "ESNext",
     "moduleResolution": "node",
-    "outDir": "dist",
     "pretty": true,
     "skipLibCheck": true,
-    "sourceMap": true,
     "strict": true,
     "target": "ESNext"
   }
