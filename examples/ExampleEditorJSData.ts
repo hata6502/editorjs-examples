@@ -4,6 +4,7 @@ import type {
   OutputData,
 } from "@editorjs/editorjs";
 import type { ValidatedExampleBlockToolData } from "./ExampleBlockTool";
+import type { ValidatedExampleReactBlockToolData } from "./ExampleReactBlockTool";
 
 /** Type definition improved OutputBlockData */
 // See also: https://github.com/codex-team/editor.js/pull/1326
@@ -13,10 +14,12 @@ interface BlockData<Type extends string, Data extends object>
   data: BlockToolData<Data>;
 }
 
-type SupportedBlockData = BlockData<"example", ValidatedExampleBlockToolData>;
+type SupportedBlockData =
+  | BlockData<"example", ValidatedExampleBlockToolData>
+  | BlockData<"exampleReact", ValidatedExampleReactBlockToolData>;
 
-interface EditorJSData extends OutputData {
+interface ExampleEditorJSData extends OutputData {
   blocks: SupportedBlockData[];
 }
 
-export type { EditorJSData };
+export type { ExampleEditorJSData };

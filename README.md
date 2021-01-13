@@ -5,6 +5,8 @@ This repository introduces the better way to use Editor.js with React and TypeSc
 
 ## Contents
 
-- [examples/EditorJSData.ts](https://github.com/hata6502/editorjs-examples/blob/main/examples/EditorJSData.ts): A type definition improved OutputData.
-
 - [examples/ExampleBlockTool.ts](https://github.com/hata6502/editorjs-examples/blob/main/examples/ExampleBlockTool.ts): An example Block Tool written in TypeScript.
+
+- [examples/ExampleEditorJSData.ts](https://github.com/hata6502/editorjs-examples/blob/main/examples/ExampleEditorJSData.ts): A type definition improved OutputData.
+
+- [examples/ExampleReactBlockTool](https://github.com/hata6502/editorjs-examples/blob/main/examples/ExampleReactBlockTool): An example React Block Tool.

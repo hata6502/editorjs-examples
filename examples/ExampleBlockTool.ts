@@ -7,15 +7,15 @@ interface ExampleBlockToolConfig {
   availableIds: string[];
 }
 
-interface CommonData {
+interface ExampleBlockToolData {
   name: string;
 }
 
-interface SavedExampleBlockToolData extends CommonData {
+interface SavedExampleBlockToolData extends ExampleBlockToolData {
   id?: string;
 }
 
-interface ValidatedExampleBlockToolData extends CommonData {
+interface ValidatedExampleBlockToolData extends ExampleBlockToolData {
   id: string;
 }
 
@@ -59,13 +59,14 @@ class ExampleBlockTool implements BlockTool {
     };
   }
 
-  validate({ id, ...otherSavedData }: SavedExampleBlockToolData) {
+  validate({ id, ...other }: SavedExampleBlockToolData) {
     if (!id) {
       return false;
     }
 
-    const _compatibilityCheck: ValidatedExampleBlockToolData = {
-      ...otherSavedData,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const compatibilityCheck: ValidatedExampleBlockToolData = {
+      ...other,
       id,
     };
 
