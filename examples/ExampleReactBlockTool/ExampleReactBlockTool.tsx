@@ -9,7 +9,7 @@ interface ExampleReactBlockToolData {
 interface SavedExampleReactBlockToolData extends ExampleReactBlockToolData {}
 
 interface ValidatedExampleReactBlockToolData
-  extends ExampleReactBlockToolData {}
+  extends SavedExampleReactBlockToolData {}
 
 type ExampleReactBlockToolDispatchData = (action: { text?: string }) => void;
 

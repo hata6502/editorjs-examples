@@ -15,7 +15,7 @@ interface SavedExampleBlockToolData extends ExampleBlockToolData {
   id?: string;
 }
 
-interface ValidatedExampleBlockToolData extends ExampleBlockToolData {
+interface ValidatedExampleBlockToolData extends SavedExampleBlockToolData {
   id: string;
 }
 
