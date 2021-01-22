@@ -10,3 +10,5 @@ This repository introduces the better way to use Editor.js with React and TypeSc
 - [examples/ExampleEditorJSData.ts](https://github.com/hata6502/editorjs-examples/blob/main/examples/ExampleEditorJSData.ts): A type definition improved OutputData.
 
 - [examples/ExampleReactBlockTool](https://github.com/hata6502/editorjs-examples/blob/main/examples/ExampleReactBlockTool): An example React Block Tool.
+
+- [examples/onDataChange.ts](https://github.com/hata6502/editorjs-examples/blob/main/examples/onDataChange.ts): Events that occur with EditorJS data changes
