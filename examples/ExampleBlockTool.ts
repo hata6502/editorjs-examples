@@ -7,12 +7,9 @@ interface ExampleBlockToolConfig {
   availableIds: string[];
 }
 
-interface ExampleBlockToolData {
-  name: string;
-}
-
-interface SavedExampleBlockToolData extends ExampleBlockToolData {
+interface SavedExampleBlockToolData {
   id?: string;
+  name: string;
 }
 
 interface ValidatedExampleBlockToolData extends SavedExampleBlockToolData {
@@ -29,6 +26,7 @@ class ExampleBlockTool implements BlockTool {
     data,
   }: BlockToolConstructorOptions<
     // Specify SavedExampleBlockToolData to accept pasted block data.
+    // See also: https://github.com/hata6502/editorjs-layout#copied-data
     SavedExampleBlockToolData,
     ExampleBlockToolConfig
   >) {

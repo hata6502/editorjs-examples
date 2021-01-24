@@ -2,11 +2,9 @@ import type { BlockTool } from "@editorjs/editorjs";
 import ReactDOM from "react-dom";
 import { Container } from "./Container";
 
-interface ExampleReactBlockToolData {
+interface SavedExampleReactBlockToolData {
   text: string;
 }
-
-interface SavedExampleReactBlockToolData extends ExampleReactBlockToolData {}
 
 interface ValidatedExampleReactBlockToolData
   extends SavedExampleReactBlockToolData {}
