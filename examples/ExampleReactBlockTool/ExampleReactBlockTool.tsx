@@ -2,12 +2,12 @@ import type { BlockTool } from "@editorjs/editorjs";
 import ReactDOM from "react-dom";
 import { Container } from "./Container";
 
-interface SavedExampleReactBlockToolData {
+interface ExampleReactBlockToolData {
   text: string;
 }
 
 interface ValidatedExampleReactBlockToolData
-  extends SavedExampleReactBlockToolData {}
+  extends ExampleReactBlockToolData {}
 
 type ExampleReactBlockToolDispatchData = (action: { text?: string }) => void;
 
@@ -52,6 +52,6 @@ export { ExampleReactBlockTool };
 
 export type {
   ExampleReactBlockToolDispatchData,
-  SavedExampleReactBlockToolData,
+  ExampleReactBlockToolData,
   ValidatedExampleReactBlockToolData,
 };

@@ -1,6 +1,6 @@
 export { ExampleReactBlockTool } from "./ExampleReactBlockTool";
 
 export type {
-  SavedExampleReactBlockToolData,
+  ExampleReactBlockToolData,
   ValidatedExampleReactBlockToolData,
 } from "./ExampleReactBlockTool";

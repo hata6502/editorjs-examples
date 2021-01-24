@@ -7,12 +7,12 @@ interface ExampleBlockToolConfig {
   availableIds: string[];
 }
 
-interface SavedExampleBlockToolData {
+interface ExampleBlockToolData {
   id?: string;
   name: string;
 }
 
-interface ValidatedExampleBlockToolData extends SavedExampleBlockToolData {
+interface ValidatedExampleBlockToolData extends ExampleBlockToolData {
   id: string;
 }
 
@@ -25,9 +25,9 @@ class ExampleBlockTool implements BlockTool {
     config,
     data,
   }: BlockToolConstructorOptions<
-    // Specify SavedExampleBlockToolData to accept pasted block data.
+    // Specify ExampleBlockToolData to accept pasted block data.
     // See also: https://github.com/hata6502/editorjs-layout#copied-data
-    SavedExampleBlockToolData,
+    ExampleBlockToolData,
     ExampleBlockToolConfig
   >) {
     // Filter undefined and empty object.
@@ -50,14 +50,14 @@ class ExampleBlockTool implements BlockTool {
     return document.createElement("div");
   }
 
-  save(): SavedExampleBlockToolData {
+  save(): ExampleBlockToolData {
     return {
       id: this.#id,
       name: this.#name,
     };
   }
 
-  validate({ id, ...other }: SavedExampleBlockToolData) {
+  validate({ id, ...other }: ExampleBlockToolData) {
     if (!id) {
       return false;
     }
@@ -76,6 +76,6 @@ export { ExampleBlockTool };
 
 export type {
   ExampleBlockToolConfig,
-  SavedExampleBlockToolData,
+  ExampleBlockToolData,
   ValidatedExampleBlockToolData,
 };
