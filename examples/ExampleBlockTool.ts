@@ -73,7 +73,6 @@ class ExampleBlockTool implements BlockTool {
 }
 
 export { ExampleBlockTool };
-
 export type {
   ExampleBlockToolConfig,
   ExampleBlockToolData,

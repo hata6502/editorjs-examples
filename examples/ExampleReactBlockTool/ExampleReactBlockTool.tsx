@@ -49,7 +49,6 @@ class ExampleReactBlockTool implements BlockTool {
 }
 
 export { ExampleReactBlockTool };
-
 export type {
   ExampleReactBlockToolDispatchData,
   ExampleReactBlockToolData,
