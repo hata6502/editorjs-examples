@@ -6,10 +6,8 @@ interface ExampleReactBlockToolData {
   text: string;
 }
 
-interface SavedExampleReactBlockToolData extends ExampleReactBlockToolData {}
-
 interface ValidatedExampleReactBlockToolData
-  extends SavedExampleReactBlockToolData {}
+  extends ExampleReactBlockToolData {}
 
 type ExampleReactBlockToolDispatchData = (action: { text?: string }) => void;
 
@@ -54,6 +52,6 @@ export { ExampleReactBlockTool };
 
 export type {
   ExampleReactBlockToolDispatchData,
-  SavedExampleReactBlockToolData,
+  ExampleReactBlockToolData,
   ValidatedExampleReactBlockToolData,
 };
