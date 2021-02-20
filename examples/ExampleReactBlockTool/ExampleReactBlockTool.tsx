@@ -1,6 +1,7 @@
 import type { BlockTool } from "@editorjs/editorjs";
+import { nanoid } from "nanoid";
 import ReactDOM from "react-dom";
-import { Container } from "./Container";
+import { Content } from "./Content";
 
 interface ExampleReactBlockToolData {
   text: string;
@@ -13,10 +14,12 @@ type ExampleReactBlockToolDispatchData = (action: { text?: string }) => void;
 
 class ExampleReactBlockTool implements BlockTool {
   #container: HTMLDivElement;
+  #editorJSChangeEventID: string;
   #text: string;
 
   constructor() {
     this.#container = document.createElement("div");
+    this.#editorJSChangeEventID = nanoid();
     this.#text = "";
   }
 
@@ -37,12 +40,17 @@ class ExampleReactBlockTool implements BlockTool {
       this.#text = action.text;
     }
 
+    // Dispatch Editor.js change event even without DOM changes.
+    this.#editorJSChangeEventID = nanoid();
+
     this.renderContainer();
   };
 
   renderContainer() {
     ReactDOM.render(
-      <Container dispatchData={this.#dispatchData} text={this.#text} />,
+      <div data-editorjs-change-event-id={this.#editorJSChangeEventID}>
+        <Content dispatchData={this.#dispatchData} text={this.#text} />
+      </div>,
       this.#container
     );
   }

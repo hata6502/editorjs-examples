@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import type { ChangeEventHandler, FunctionComponent } from "react";
 import type { ExampleReactBlockToolDispatchData } from "./ExampleReactBlockTool";
 
-const Container: FunctionComponent<{
+const Content: FunctionComponent<{
   dispatchData: ExampleReactBlockToolDispatchData;
   text: string;
 }> = ({ dispatchData, text }) => {
@@ -14,4 +14,4 @@ const Container: FunctionComponent<{
   return <input value={text} onChange={handleTextChange} />;
 };
 
-export { Container };
+export { Content };
